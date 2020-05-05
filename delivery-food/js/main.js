@@ -62,25 +62,25 @@ function notAuthorized() {
 
 	function logIn(e) {
 		e.preventDefault();
-	 	login = loginInput.value;
-	 	
+	 	login = loginInput.value.trim();	 	
 	 	localStorage.setItem('login', login);
+		
 	 	//***** Home work *****\\
-	 	
-	 	if (login) {
-			toggleModalAuth();
+
+	 	if (login.trim()) {
+	 		
+	 		toggleModalAuth();
+	 		buttonAuth.removeEventListener('click', toggleModalAuth);
+			closeAuth.removeEventListener('click', toggleModalAuth);
+			logInForm.removeEventListener('submit', logIn); 
+			logInForm.reset();
+		 	checkAuth();
+
 	 	}else {
-	 		alert("Введите логин");
+	 		alert("Введите логин");			
 	 	}
 
-	 	//*********************\\
-
-
-	 	buttonAuth.removeEventListener('click', toggleModalAuth);
-		closeAuth.removeEventListener('click', toggleModalAuth);
-		logInForm.removeEventListener('submit', logIn); 
-		logInForm.reset();
-	 	checkAuth();
+	 	//*********************\\	 	
 	}
 
 	console.log('Не авторизован');
