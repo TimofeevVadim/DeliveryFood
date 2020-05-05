@@ -15,7 +15,7 @@ const buttonAuth = document.querySelector('.button-auth');
 const modalAuth = document.querySelector('.modal-auth');
 const closeAuth = document.querySelector('.close-auth');
 const logInForm = document.querySelector('#logInForm');
-let login = localStorage.getItem('login'); //получение сохранённого логина из localStorage
+let login = localStorage.getItem('login');
 const loginInput = document.querySelector('#login');
 const userName = document.querySelector('.user-name');
 const buttonOut = document.querySelector('.button-out');
@@ -64,7 +64,7 @@ function notAuthorized() {
 		e.preventDefault();
 	 	login = loginInput.value;
 	 	
-	 	localStorage.setItem('login', login); // Добавить данные логина в localStorage, кэш браузера
+	 	localStorage.setItem('login', login);
 	 	//***** Home work *****\\
 	 	
 	 	if (login) {
