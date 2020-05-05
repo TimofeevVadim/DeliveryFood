@@ -67,10 +67,10 @@ function notAuthorized() {
 	 	localStorage.setItem('login', login); // Добавить данные логина в localStorage, кэш браузера
 	 	//***** Home work *****\\
 	 	
-	 	if (!login) {
-	 		alert("Введите логин");
+	 	if (login) {
+			toggleModalAuth();
 	 	}else {
-	 		toggleModalAuth();
+	 		alert("Введите логин");
 	 	}
 
 	 	//*********************\\
