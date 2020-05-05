@@ -87,7 +87,6 @@ function notAuthorized() {
 	buttonAuth.addEventListener('click', toggleModalAuth);
 	closeAuth.addEventListener('click', toggleModalAuth);
 	logInForm.addEventListener('submit', logIn);
-	//buttonLogin.addEventListener('click', toggleModalAuth);
 }
 
 
